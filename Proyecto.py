@@ -1,6 +1,7 @@
 #------------------------------VARIABLES---------------------------#
 import csv
 liga=[]
+equipos=[]
 #------------------------------FUNCIONES---------------------------#
 #Las funciones correspondientes a la primera, segunda parte deben de ir encima,
 #al igual que las de la tercera parte, que iran encima de las de la
@@ -26,6 +27,15 @@ def leerPartidos():
         print("Ha ocurrido un error al intentar abrir el archivo")
     return partidos
 
+#funcion impClasificacion()
+def impClasificacion(liga):
+    #Función para la segunda parte 
+    equipos=equipos(liga)
+    infoEquipos(datosLiga,equipos)
 
 #------------------------------MAIN-------------------------------#    
 liga=leerPartidos()
+impClasificacion(liga)
+ 
+
+
