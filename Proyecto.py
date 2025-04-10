@@ -3,7 +3,7 @@ import csv
 liga=[]
 equipos=[]
 #------------------------------FUNCIONES---------------------------#
-#Las funciones correspondientes a la segunda parte deben de ir encima,
+#Las funciones correspondientes a la primera, segunda parte deben de ir encima,
 #al igual que las de la tercera parte, que iran encima de las de la
 #segunda parte
 
@@ -33,7 +33,9 @@ def impClasificacion(liga):
     equipos=equipos(liga)
     infoEquipos(datosLiga,equipos)
 
-
 #------------------------------MAIN-------------------------------#    
 liga=leerPartidos()
 impClasificacion(liga)
+ 
+
+
