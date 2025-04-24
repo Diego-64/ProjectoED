@@ -1,12 +1,3 @@
-#------------------------------VARIABLES---------------------------#
-import csv
-liga=[]
-equipos=[]
-#------------------------------FUNCIONES---------------------------#
-#Las funciones correspondientes a la primera, segunda parte deben de ir encima,
-#al igual que las de la tercera parte, que iran encima de las de la
-#segunda parte
-
 #función leerPartidos() 
 def leerPartidos():
     partidos=[]
@@ -29,13 +20,38 @@ def leerPartidos():
 
 #funcion impClasificacion()
 def impClasificacion(liga):
-    #Función para la segunda parte 
-    equipos=equipos(liga)
-    infoEquipos(datosLiga,equipos)
+
+    def Equipos(datosliga):
+        #Se inicia la variable
+        lista_equipos=[]
+        
+        #Bucle for que se encarga de introducir los nombres de los equipos en una lista
+        #aparte, revisa que no se añadan nombres repetidos
+        for i in datosliga:
+            equipo=i.get("Equipo 1")
+            if(equipo not in lista_equipos):
+                lista_equipos.append(equipo)
+                
+            equipo=i.get("Equipo 2")
+            if(equipo not in lista_equipos):
+                lista_equipos.append(equipo)
+        
+        #Devuelve la lista con los nombres
+        return lista_equipos
+    #def Equipos
+            
+    #def InfoEquipos(liga,equipos):
+
+    equipos=Equipos(liga)
+    #InfoEquipos(liga,equipos)
+    
+    
+#def impClasificación
 
 #------------------------------MAIN-------------------------------#    
+import csv
+liga=[]
+
 liga=leerPartidos()
 impClasificacion(liga)
- 
-
 
