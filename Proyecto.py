@@ -53,6 +53,8 @@ def impClasificacion(liga):
                 return 0
             elif(puntuaciones[0]<puntuaciones[1]):
                 return -1
+        
+        #def QuienGana(resultado):
 
         #def Puntos(info):
                     
@@ -105,6 +107,7 @@ def impClasificacion(liga):
 
     equipos=Equipos(liga)
     InfoEquipos(liga,equipos)
+
 #def impClasificación
 
 #------------------------------MAIN-------------------------------#    
