@@ -39,9 +39,20 @@ def impClasificacion(liga):
         #Devuelve la lista con los nombres
         return lista_equipos
     #def Equipos
-
                 
     def InfoEquipos(datosliga,equipos):
+        
+        def QuienGana(resultado):
+            #El FT obtenido se divide en dos partes
+            puntuaciones=resultado.split('-')
+            
+            #Devuelve un número en función de los resultados
+            if(puntuaciones[0]>puntuaciones[1]):
+                return 1
+            elif(puntuaciones[0]==puntuaciones[1]):
+                return 0
+            elif(puntuaciones[0]<puntuaciones[1]):
+                return -1
         
         #def QuienGana(resultado):
 
@@ -96,13 +107,6 @@ def impClasificacion(liga):
 
     equipos=Equipos(liga)
     InfoEquipos(liga,equipos)
-
-            
-    #def InfoEquipos(liga,equipos):
-
-    
-    
-    
 
 #def impClasificación
 
