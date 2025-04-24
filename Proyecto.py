@@ -1,3 +1,5 @@
+#Proyecto hecho por: Diego Ortega Fénix y Cristina Benítez Méndez
+
 #función leerPartidos() 
 def leerPartidos():
     partidos=[]
@@ -23,6 +25,7 @@ def impClasificacion(liga):
     equipos=[]
     
     def Equipos(datosliga):
+        #Se inicia la variable
         lista_equipos=[]
         
         #Bucle for que se encarga de introducir los nombres de los equipos en una lista
@@ -39,8 +42,7 @@ def impClasificacion(liga):
         #Devuelve la lista con los nombres
         return lista_equipos
     #def Equipos
-       
-         
+
     def InfoEquipos(datosliga,equipos):
         
         def QuienGana(resultado):
@@ -54,7 +56,8 @@ def impClasificacion(liga):
                 return 0
             elif(puntuaciones[0]<puntuaciones[1]):
                 return -1
-
+        #def QuienGana
+              
         def Puntos(info):
             puntos=0
             #Calcula los puntos en función del contenido del diccionario de los
@@ -62,11 +65,11 @@ def impClasificacion(liga):
             puntos+=info.get("Ganados")*3
             puntos+=info.get("Empatados")
             return puntos
-            
+        #def Puntos
                 
         def Clasificacion(datos):
             return sorted(datos, key=lambda tupla:tupla[2])
-        
+        #def Clasificacion
         
         datos=[]
         dict_equipos={}
@@ -89,8 +92,7 @@ def impClasificacion(liga):
             
             resultado=partido.get("FT")
             ganador=QuienGana(resultado)
-            
-                
+               
             if(ganador==1):
                 dict_equipos[local]["Ganados"]+=1
                 dict_equipos[visitante]["Perdidos"]+=1
@@ -111,14 +113,12 @@ def impClasificacion(liga):
         #Devuelve la lista anterior, pero ordenada    
         return Clasificacion(datos)
     #def infoEquipos        
-
-
+    
     finales=InfoEquipos(liga,Equipos(liga))
     
     #Se realiza un bucle for para poder imprimir la lista de forma clara
     for equipo in finales:
-        print(equipo)
-    
+        print(equipo)      
 #def impClasificación
 
 #------------------------------MAIN-------------------------------#    
@@ -127,4 +127,3 @@ liga=[]
 
 liga=leerPartidos()
 impClasificacion(liga)
-
