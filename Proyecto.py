@@ -39,6 +39,7 @@ def impClasificacion(liga):
         #Devuelve la lista con los nombres
         return lista_equipos
     #def Equipos
+
                 
     def InfoEquipos(datosliga,equipos):
         
@@ -95,6 +96,14 @@ def impClasificacion(liga):
 
     equipos=Equipos(liga)
     InfoEquipos(liga,equipos)
+
+            
+    #def InfoEquipos(liga,equipos):
+
+    
+    
+    
+
 #def impClasificación
 
 #------------------------------MAIN-------------------------------#    
