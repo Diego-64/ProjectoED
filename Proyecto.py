@@ -53,13 +53,19 @@ def impClasificacion(liga):
                 return 0
             elif(puntuaciones[0]<puntuaciones[1]):
                 return -1
+         #def QuienGana
         
-        #def QuienGana(resultado):
-
-        #def Puntos(info):
+        def Puntos(info):
+            puntos=0
+            #Calcula los puntos en función del contenido del diccionario de los
+            #partidos
+            puntos+=info.get("Ganados")*3
+            puntos+=info.get("Empatados")
+            return puntos
                     
+         #def Puntos
+        
         #def Clasificacion(datos):
-
         
         datos=[]
         dict_equipos={}
@@ -104,10 +110,8 @@ def impClasificacion(liga):
         #Devuelve la lista anterior, pero ordenada    
         return Clasificacion(datos)
     #def infoEquipos       
-
     equipos=Equipos(liga)
     InfoEquipos(liga,equipos)
-
 #def impClasificación
 
 #------------------------------MAIN-------------------------------#    
